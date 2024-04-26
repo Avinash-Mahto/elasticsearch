@@ -39,7 +39,7 @@ $ docker exec -it es-demo /usr/share/elasticsearch/bin/elasticsearch-create-enro
 $ export ELASTIC_PASSWORD="your_password"
 
 # Copy the http_ca.crt SSL certificate from the container to your local machine
-$ docker cp es-demo:/usr/share/elasticsearch/config/certs/http_ca.crt 
+$ docker cp es-demo:/usr/share/elasticsearch/config/certs/http_ca.crt .
 
 # Make a REST API call to Elasticsearch to ensure the Elasticsearch container is running
 $ curl --cacert http_ca.crt -u elastic:$ELASTIC_PASSWORD https://localhost:9200
