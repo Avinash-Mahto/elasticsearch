@@ -52,7 +52,7 @@ $ docker pull docker.elastic.co/kibana/kibana:8.13.2
 $ wget https://artifacts.elastic.co/cosign.pub
 $ cosign verify --key cosign.pub docker.elastic.co/kibana/kibana:8.13.2
 # Start a Kibana container
-$ docker run --name kib01 --net elastic -p 5601:5601 docker.elastic.co/kibana/kibana:8.13.2
+$ docker run --name kib-demo --net elastic-demo -p 5601:5601 docker.elastic.co/kibana/kibana:8.13.2
 
 Note: Just in case of you missed previously generated token the regenrate it using below command
 $ docker exec -it es-demo /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
